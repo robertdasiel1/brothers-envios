@@ -1,0 +1,788 @@
+:root {
+  --blue-900: #0f2442;
+  --blue-700: #1f63b7;
+  --blue-600: #2b76d2;
+  --blue-100: #deebfb;
+  --green-500: #22c55e;
+  --green-600: #13aa4a;
+  --red-500: #eb2328;
+  --ink-900: #11223d;
+  --ink-700: #445b78;
+  --ink-600: #5d7392;
+  --bg-soft: #f1f4f8;
+  --bg-section: #e8edf3;
+  --white: #ffffff;
+  --shadow: 0 10px 22px rgba(16, 39, 72, 0.1);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink-700);
+  font-family: "Nunito Sans", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #f7f9fc 0%, #f0f4f9 30%, #edf2f8 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1220px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.topbar {
+  background: var(--blue-700);
+  color: #dbebff;
+  font-size: 0.95rem;
+}
+
+.topbar-inner {
+  min-height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-contact {
+  display: flex;
+  gap: 26px;
+}
+
+.topbar-contact span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-wrap {
+  background: var(--white);
+  border-bottom: 1px solid #dce5f1;
+  box-shadow: 0 3px 12px rgba(10, 33, 67, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  min-height: 86px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  color: var(--blue-600);
+  border: 2px solid #86bee8;
+  background: #f3fbff;
+  font-size: 0.95rem;
+}
+
+.logo-text {
+  display: grid;
+  gap: 1px;
+}
+
+.logo-text strong {
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 1.92rem;
+  line-height: 1;
+  color: var(--blue-600);
+}
+
+.logo-text small {
+  font-size: 1.18rem;
+  color: #778ca5;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #2f3f56;
+}
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--blue-600);
+}
+
+.whatsapp-nav {
+  background: var(--green-500);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(21, 174, 74, 0.28);
+}
+
+.whatsapp-nav:hover {
+  background: var(--green-600);
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: #edf3fb;
+  color: var(--blue-700);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  min-height: 760px;
+  display: grid;
+  align-items: center;
+  background-image: linear-gradient(90deg, rgba(17, 84, 174, 0.8), rgba(12, 73, 160, 0.65), rgba(8, 56, 124, 0.65)),
+    url("https://images.unsplash.com/photo-1511746315387-c4a76990fded?auto=format&fit=crop&w=2200&q=80");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: auto -12% -35% -15%;
+  height: 360px;
+  background: radial-gradient(circle at center, rgba(80, 170, 255, 0.27), rgba(7, 28, 56, 0));
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  color: var(--white);
+  padding: 82px 0;
+}
+
+.hero-pill {
+  display: inline-block;
+  background: var(--red-500);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 1.16rem;
+  font-weight: 800;
+}
+
+.hero h1 {
+  margin: 22px 0 16px;
+  color: var(--white);
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 720px;
+  font-size: clamp(1.15rem, 1.7vw, 2rem);
+  line-height: 1.38;
+  color: #e4f0ff;
+}
+
+.hero-actions {
+  margin-top: 34px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 16px 30px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.btn-primary {
+  background: var(--green-500);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(21, 174, 74, 0.3);
+}
+
+.btn-ghost {
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: rgba(147, 187, 240, 0.2);
+}
+
+.section {
+  padding: 104px 0;
+}
+
+.services,
+.rates,
+.contact {
+  background: var(--bg-section);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: var(--blue-600);
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+  color: var(--ink-900);
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  margin: 14px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: 1.9rem;
+  line-height: 1.35;
+}
+
+.service-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.service-card {
+  padding: 28px;
+  border: 1px solid #dbe4f2;
+}
+
+.icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--blue-100);
+  color: var(--blue-600);
+  display: inline-grid;
+  place-items: center;
+  font-size: 1.45rem;
+}
+
+.service-card h3 {
+  margin: 22px 0 10px;
+  color: var(--ink-900);
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 1.34rem;
+  line-height: 1.45;
+}
+
+.products {
+  background: var(--bg-soft);
+}
+
+.product-grid {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.product-card {
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 268px;
+  object-fit: cover;
+}
+
+.product-body {
+  padding: 22px;
+}
+
+.product-body h3 {
+  margin: 0;
+  color: var(--ink-900);
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+}
+
+.price {
+  margin: 10px 0 14px;
+  color: var(--red-500);
+  font-size: 2.65rem;
+  font-weight: 900;
+}
+
+.product-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  font-size: 1.3rem;
+}
+
+.product-body li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.product-body li::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #54c384;
+  margin-top: 1px;
+}
+
+.btn-card {
+  margin-top: 18px;
+  width: 100%;
+  background: var(--blue-600);
+  color: #fff;
+  font-size: 1.45rem;
+  padding-block: 14px;
+}
+
+.rates-wrap {
+  max-width: 980px;
+}
+
+.rate-table {
+  margin: 44px auto 0;
+  overflow: hidden;
+}
+
+.rate-table header {
+  text-align: center;
+  background: linear-gradient(125deg, #226ec9, #174f96);
+  color: #fff;
+  padding: 28px;
+}
+
+.rate-table header h3 {
+  margin: 0;
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 2.8rem;
+}
+
+.rate-table header p {
+  margin: 6px 0 0;
+  font-size: 1.3rem;
+  color: #dce9ff;
+}
+
+.rate-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 28px;
+  border-top: 1px solid #dce6f4;
+  background: #fefefe;
+}
+
+.rate-row h4 {
+  margin: 0;
+  color: var(--ink-900);
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 2.05rem;
+}
+
+.rate-row p {
+  margin: 4px 0 0;
+  font-size: 1.28rem;
+}
+
+.rate-row strong {
+  color: var(--red-500);
+  font-size: 3.15rem;
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+}
+
+.rate-table footer {
+  text-align: center;
+  padding: 24px;
+  background: #edf2f8;
+  font-size: 1.3rem;
+}
+
+.contact-grid {
+  margin-top: 46px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.contact-list {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 4px 0;
+}
+
+.contact-item h3 {
+  margin: 4px 0 2px;
+  color: var(--ink-900);
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.map-wrap {
+  overflow: hidden;
+  min-height: 420px;
+  border: 1px solid #d6e2f3;
+}
+
+.map-wrap iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+}
+
+.footer {
+  background: linear-gradient(180deg, #172a45 0%, #0f1f36 100%);
+  color: #aab9ce;
+  padding: 62px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 38px;
+}
+
+.footer-logo {
+  margin-bottom: 14px;
+}
+
+.footer .logo-text strong {
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.footer .logo-text small {
+  color: #92a8c4;
+  font-size: 1.05rem;
+}
+
+.footer h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 1.6rem;
+}
+
+.footer p,
+.footer li {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--green-500);
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(34, 197, 94, 0.34);
+  z-index: 90;
+  font-size: 1.95rem;
+  animation: pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 1200px) {
+  .logo-text strong {
+    font-size: 1.58rem;
+  }
+
+  .logo-text small {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 20px;
+    font-size: 1.13rem;
+  }
+
+  .btn {
+    font-size: 1.22rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.66rem;
+  }
+
+  .product-body h3,
+  .contact-item h3 {
+    font-size: 1.62rem;
+  }
+
+  .rate-row h4 {
+    font-size: 1.58rem;
+  }
+
+  .rate-row strong {
+    font-size: 2.3rem;
+  }
+
+  .footer p,
+  .footer li {
+    font-size: 1.07rem;
+  }
+}
+
+@media (max-width: 940px) {
+  .topbar {
+    display: none;
+  }
+
+  .navbar {
+    min-height: 74px;
+  }
+
+  .menu-toggle {
+    display: inline-grid;
+    place-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    background: #fff;
+    border-top: 1px solid #d8e3f1;
+    box-shadow: 0 18px 26px rgba(10, 33, 67, 0.12);
+    padding: 18px 24px 24px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .nav-links a:hover {
+    background: #edf3fb;
+  }
+
+  .whatsapp-nav {
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    padding-block: 64px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .service-grid,
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrap {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(1220px, calc(100% - 28px));
+  }
+
+  .logo-text strong {
+    font-size: 1.28rem;
+  }
+
+  .logo-text small {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero-pill {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1.08rem;
+  }
+
+  .section {
+    padding: 76px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.16rem;
+  }
+
+  .service-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card h3,
+  .product-body h3,
+  .contact-item h3 {
+    font-size: 1.45rem;
+  }
+
+  .service-card p,
+  .product-body ul,
+  .contact-item p,
+  .rate-row p,
+  .rate-table footer {
+    font-size: 1.07rem;
+  }
+
+  .price {
+    font-size: 2.15rem;
+  }
+
+  .rate-table header h3 {
+    font-size: 2rem;
+  }
+
+  .rate-row {
+    padding: 20px;
+  }
+
+  .rate-row strong {
+    font-size: 1.75rem;
+  }
+
+  .floating-whatsapp {
+    width: 52px;
+    height: 52px;
+  }
+}
