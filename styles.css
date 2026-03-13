@@ -342,6 +342,19 @@ h2 {
   border: 1px solid #dbe4f2;
 }
 
+.service-card.has-cover {
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.service-cover {
+  width: calc(100% + 56px);
+  height: 170px;
+  margin: 0 -28px 18px;
+  object-fit: cover;
+  border-bottom: 1px solid #dbe4f2;
+}
+
 .icon-box {
   width: 56px;
   height: 56px;
