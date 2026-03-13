@@ -4,6 +4,6 @@
   "private": true,
   "description": "Sitio estatico de Brothers Envios",
   "scripts": {
-    "build": "echo 'Static site build: no compilation required'"
+    "build": "node scripts/build-static.mjs"
   }
 }
