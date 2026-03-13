@@ -357,6 +357,10 @@ h2 {
   border-bottom: 1px solid #dbe4f2;
 }
 
+.service-cover.cover-top {
+  object-position: center top;
+}
+
 .service-card.has-cover h3,
 .service-card.has-cover p {
   padding-inline: 28px;
