@@ -17,6 +17,8 @@ Personalizacion de imagenes de Brothers Envios
 3) Imagenes de servicios
 - Archivo: assets/servicios/paqueteria-aerea-maritima.png
 - Archivo: assets/servicios/venta-pasajes.png
+- Archivo: assets/servicios/renta-autos.png
+- Archivo: assets/servicios/tramites-pasaportes.png
 - Recomendado: 1200x800, formato PNG o JPG
 
 Nota:
