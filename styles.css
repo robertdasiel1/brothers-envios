@@ -485,6 +485,8 @@ h2 {
 }
 
 .avatar-circle {
+  position: relative;
+  overflow: hidden;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -493,6 +495,20 @@ h2 {
   font-weight: 800;
   color: #fff;
   background: linear-gradient(145deg, #2b76d2, #1f63b7);
+}
+
+.testimonial-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-initial {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
 }
 
 .testimonial-head h3 {

@@ -196,7 +196,10 @@
         <div class="testimonials-grid">
           <article class="card testimonial-card">
             <header class="testimonial-head">
-              <span class="avatar-circle">B</span>
+              <span class="avatar-circle" aria-hidden="true">
+                <img class="testimonial-avatar" src="assets/testimonios/bettyca-bazail.jpg" alt="">
+                <span class="avatar-initial">B</span>
+              </span>
               <div>
                 <h3>Bettyca Bazail</h3>
                 <p>Hace 2 meses</p>
@@ -208,7 +211,10 @@
 
           <article class="card testimonial-card">
             <header class="testimonial-head">
-              <span class="avatar-circle">Y</span>
+              <span class="avatar-circle" aria-hidden="true">
+                <img class="testimonial-avatar" src="assets/testimonios/yaineri-marrero.jpg" alt="">
+                <span class="avatar-initial">Y</span>
+              </span>
               <div>
                 <h3>Yaineri Marrero</h3>
                 <p>Hace 3 semanas</p>
@@ -220,7 +226,10 @@
 
           <article class="card testimonial-card">
             <header class="testimonial-head">
-              <span class="avatar-circle">A</span>
+              <span class="avatar-circle" aria-hidden="true">
+                <img class="testimonial-avatar" src="assets/testimonios/arayda-dominguez.jpg" alt="">
+                <span class="avatar-initial">A</span>
+              </span>
               <div>
                 <h3>Arayda Dominguez Salas</h3>
                 <p>Hace 2 meses</p>
@@ -232,7 +241,10 @@
 
           <article class="card testimonial-card">
             <header class="testimonial-head">
-              <span class="avatar-circle">N</span>
+              <span class="avatar-circle" aria-hidden="true">
+                <img class="testimonial-avatar" src="assets/testimonios/norma-orta.jpg" alt="">
+                <span class="avatar-initial">N</span>
+              </span>
               <div>
                 <h3>Norma Orta</h3>
                 <p>Hace 1 mes</p>
@@ -371,6 +383,19 @@
         const icon = img.nextElementSibling;
         if (icon) {
           icon.style.opacity = '1';
+        }
+      });
+    });
+
+    document.querySelectorAll('.testimonial-avatar').forEach((img) => {
+      img.addEventListener('error', () => {
+        img.style.display = 'none';
+      });
+
+      img.addEventListener('load', () => {
+        const initial = img.nextElementSibling;
+        if (initial) {
+          initial.style.display = 'none';
         }
       });
     });

@@ -21,5 +21,12 @@ Personalizacion de imagenes de Brothers Envios
 - Archivo: assets/servicios/tramites-pasaportes.png
 - Recomendado: 1200x800, formato PNG o JPG
 
+4) Fotos de clientes (testimonios)
+- Archivo: assets/testimonios/bettyca-bazail.jpg
+- Archivo: assets/testimonios/yaineri-marrero.jpg
+- Archivo: assets/testimonios/arayda-dominguez.jpg
+- Archivo: assets/testimonios/norma-orta.jpg
+- Recomendado: 400x400 (cuadrada), formato JPG o PNG
+
 Nota:
 Si una imagen local no existe todavia, la web usa imagen de respaldo automaticamente.
