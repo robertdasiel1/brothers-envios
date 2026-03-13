@@ -202,6 +202,7 @@ a {
   display: grid;
   align-items: center;
   background-image: linear-gradient(90deg, rgba(17, 84, 174, 0.8), rgba(12, 73, 160, 0.65), rgba(8, 56, 124, 0.65)),
+    url("assets/hero/habana-portada.jpg"),
     url("https://images.unsplash.com/photo-1511746315387-c4a76990fded?auto=format&fit=crop&w=2200&q=80");
   background-size: cover;
   background-position: center;
